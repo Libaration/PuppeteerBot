@@ -1,0 +1,16 @@
+{
+  "name": "ashlandnewsletter",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "chrome-cookies-secure": "^2.0.0",
+    "dayjs": "^1.11.5",
+    "puppeteer": "^19.0.0"
+  }
+}
