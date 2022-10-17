@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import config from "../config.js";
+
 import { getCookies } from "chrome-cookies-secure";
 import fs from "fs";
 const {
@@ -15,9 +16,7 @@ const browser = await puppeteer.launch({
   headless: false,
   defaultViewport: null,
   timeout: 0,
-
   args: ["--start-maximized"],
-  ignoreDefaultArgs: ["--disable-extensions"],
 });
 successMessage("Browser opened");
 
@@ -51,6 +50,7 @@ const setCookies = async (cookies) => {
     //save the output of page.getCookie() to a file on the hard drive
     //so that the cookie can be used in the future without having to login
     //as admin
+
     const cookieData = await page.cookies();
     fs.writeFile(
       "./saved_data/cookies.json",
